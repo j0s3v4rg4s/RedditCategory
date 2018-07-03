@@ -49,4 +49,8 @@ export class CategoriesComponent implements OnInit {
 			this.loadMoreCategories = false
 		}
 	}
+
+	showCategory(item: Child) {
+		console.log(item.data.description_html)
+	}
 }

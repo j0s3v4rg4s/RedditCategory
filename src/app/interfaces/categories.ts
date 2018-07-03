@@ -1,9 +1,3 @@
-// To parse this data:
-//
-//   import { Convert, Categories } from "./file";
-//
-//   const categories = Convert.toCategories(json);
-
 export interface Categories {
 	kind: string
 	data: CategoriesData
