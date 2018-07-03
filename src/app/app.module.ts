@@ -10,6 +10,9 @@ import { RequestService } from './services/request/request.service'
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms'
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -22,7 +25,9 @@ import {MatCardModule} from '@angular/material/card';
 		HttpClientModule,
 		FlexLayoutModule,
 		FormsModule,
-		MatCardModule
+		MatCardModule,
+		MatProgressSpinnerModule,
+		MatButtonModule
 	],
 	providers: [RequestService],
 	bootstrap: [AppComponent]

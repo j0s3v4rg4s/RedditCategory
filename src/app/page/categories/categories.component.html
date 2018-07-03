@@ -4,9 +4,9 @@
 	</div>
 
 	<div marco-body>
-
+		<mat-spinner style="margin: auto" *ngIf="loadCategories"></mat-spinner>
 		<div fxLayout="row wrap" fxLayoutAlign="start stretch">
-			<div fxFlex="33%" class="categories-item" *ngFor="let item of categories">
+			<div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.gt-md="25%" class="categories-item" *ngFor="let item of categories">
 
 
 				<mat-card class="example-card">
@@ -19,19 +19,25 @@
 					<img *ngIf="item.data.banner_img" mat-card-image [src]="item.data.banner_img" alt="Photo of a Shiba Inu">
 					<img *ngIf="!item.data.banner_img" mat-card-image src="assets/img/Reddit.png" alt="Photo of a Shiba Inu">
 
-					<mat-card-content>
+					<mat-card-content style="word-wrap: break-word;">
 						{{item.data.public_description}}
 					</mat-card-content>
 					<mat-card-actions>
-						<button mat-button>LIKE</button>
-						<button mat-button>SHARE</button>
+						<button mat-button color="primary">Ver categoría</button>
 					</mat-card-actions>
 				</mat-card>
 
 
 
 			</div>
+
+
+			<div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.lt-lg="33%" fxFlex="25%" class="categories-item" fxFlexAlign="center" *ngIf="loadMoreCategories">
+				<mat-spinner style="margin: auto"></mat-spinner>
+			</div>
+
 		</div>
+
 
 	</div>
 </app-marco>
