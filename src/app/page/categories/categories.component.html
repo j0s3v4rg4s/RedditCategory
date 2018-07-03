@@ -1,0 +1,37 @@
+<app-marco>
+	<div marco-header>
+		<span>Reddit Categorias</span>
+	</div>
+
+	<div marco-body>
+
+		<div fxLayout="row wrap" fxLayoutAlign="start stretch">
+			<div fxFlex="33%" class="categories-item" *ngFor="let item of categories">
+
+
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div *ngIf="!item.data.icon_img" mat-card-avatar class="category-card-icon"></div>
+						<div *ngIf="item.data.icon_img" mat-card-avatar class="category-card-icon" [style.background-image]="'url(' + item.data.icon_img + ')'"></div>
+						<mat-card-title>{{item.data.title}}</mat-card-title>
+						<mat-card-subtitle>{{item.data.subreddit_type}}</mat-card-subtitle>
+					</mat-card-header>
+					<img *ngIf="item.data.banner_img" mat-card-image [src]="item.data.banner_img" alt="Photo of a Shiba Inu">
+					<img *ngIf="!item.data.banner_img" mat-card-image src="assets/img/Reddit.png" alt="Photo of a Shiba Inu">
+
+					<mat-card-content>
+						{{item.data.public_description}}
+					</mat-card-content>
+					<mat-card-actions>
+						<button mat-button>LIKE</button>
+						<button mat-button>SHARE</button>
+					</mat-card-actions>
+				</mat-card>
+
+
+
+			</div>
+		</div>
+
+	</div>
+</app-marco>

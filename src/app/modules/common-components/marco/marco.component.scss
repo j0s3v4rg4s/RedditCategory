@@ -1,0 +1,23 @@
+app-marco {
+	display: block;
+	box-sizing: border-box;
+	padding-top: 64px;
+	height: 100%;
+	.mat-toolbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%
+	}
+	.marco-body{
+		box-sizing: border-box;
+		padding: 10px 20px;
+		height: 100%;
+		overflow: auto;
+	}
+
+	.marco-body-content{
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+}
