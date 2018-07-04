@@ -19,7 +19,6 @@ export class CategoryComponent implements OnInit {
 	// Constructor
 	// ----------------------------------------------------------------------------------------------------------------
 	constructor(
-		public dialogRef: MatDialogRef<CategoryComponent>,
 		@Inject(MAT_DIALOG_DATA) public data: Child,
 		private request: RequestService
 	) {
