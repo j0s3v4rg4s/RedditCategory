@@ -1,4 +1,6 @@
-# RedditCategory
+# RedditCategory 
+
+[![Build Status](https://travis-ci.org/ruedagato/RedditCategory.svg?branch=master)](https://travis-ci.org/ruedagato/RedditCategory)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
