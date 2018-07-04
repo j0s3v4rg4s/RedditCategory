@@ -1,0 +1,51 @@
+<app-marco>
+	<!-- HEADER -->
+	<mat-toolbar marco-header color="primary">
+		<h1 class="display-1">{{data.data.header_title}}</h1>
+		<div style="flex-grow: 1"></div>
+		<button mat-icon-button mat-dialog-close>
+			<mat-icon aria-label="Example icon-button with a heart icon">close</mat-icon>
+		</button>
+	</mat-toolbar>
+
+	<!-- BODY -->
+	<div marco-body>
+		<div *ngIf="data.data.banner_size" [ngStyle]="getBannerProperty()" class="category_banner-content">
+			<img [src]="data.data.banner_img" alt="" style="width: 100%;">
+		</div>
+		<div *ngIf="!data.data.banner_size" class="category_banner-content">
+			<img src="assets/img/Reddit.png" alt="" style="margin: auto; display: block">
+		</div>
+
+
+		<div class="category_containerInfo">
+			<h1 class="display-1">{{data.data.title}}</h1>
+			<div [innerHTML]="convertHtml(data.data.submit_text_html)"></div>
+
+			<div [innerHTML]="convertHtml(data.data.description_html)" style="margin-bottom: 120px"></div>
+			<h2>Commentaries</h2>
+			<mat-card *ngFor="let item of bestComments" style="margin-bottom: 10px">
+				<mat-card-header>
+					<mat-card-title> publish by {{item.data.subreddit_name_prefixed}}</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p style="font-weight: bold">{{item.data.title}}</p>
+				</mat-card-content>
+				<mat-card-footer>
+					<div class="category_score">
+						<mat-icon>thumb_up</mat-icon> {{item.data.ups}}
+					</div>
+					<div class="category_score">
+						<mat-icon>thumb_down</mat-icon> {{item.data.downs}}
+					</div>
+
+				</mat-card-footer>
+
+			</mat-card>
+		</div>
+
+
+
+	</div>
+
+</app-marco>

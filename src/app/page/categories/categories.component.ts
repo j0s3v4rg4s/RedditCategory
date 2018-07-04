@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core'
 import { RequestService } from '../../services/request/request.service'
 import { Child } from '../../interfaces/categories'
 import { EventService } from '../../services/event/event.service'
+import { MatDialog } from '@angular/material/dialog'
+import { CategoryComponent } from '../../modules/common-components/category/category.component'
 
 @Component({
 	selector: 'app-categories',
@@ -20,7 +22,7 @@ export class CategoriesComponent implements OnInit {
 	// ----------------------------------------------------------------------------------------------------------------
 	// Constructor
 	// ----------------------------------------------------------------------------------------------------------------
-	constructor(private request: RequestService, private eventSer: EventService) {
+	constructor(private request: RequestService, private eventSer: EventService, public dialog: MatDialog) {
 		this.loadFirstChildren().then(() => {
 			eventSer.$obsEventScroll.subscribe(() => {
 				this.loadNextChildren()
@@ -51,6 +53,13 @@ export class CategoriesComponent implements OnInit {
 	}
 
 	showCategory(item: Child) {
-		console.log(item.data.description_html)
+		this.dialog.open(CategoryComponent, {
+			data: item,
+			width: '100%',
+			maxWidth: '100%',
+			height: '100%',
+			maxHeight: '100%',
+			panelClass: 'customModal'
+		})
 	}
 }

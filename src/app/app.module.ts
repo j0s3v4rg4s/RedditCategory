@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { AppRoutingModule } from './app-routing.module'
@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms'
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 
@@ -27,7 +30,9 @@ import {MatButtonModule} from '@angular/material/button';
 		FormsModule,
 		MatCardModule,
 		MatProgressSpinnerModule,
-		MatButtonModule
+		MatButtonModule,
+		MatDialogModule,
+		MatToolbarModule
 	],
 	providers: [RequestService],
 	bootstrap: [AppComponent]

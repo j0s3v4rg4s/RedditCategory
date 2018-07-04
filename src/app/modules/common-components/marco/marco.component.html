@@ -1,6 +1,4 @@
-<mat-toolbar color="primary">
-	<ng-content select="[marco-header]"></ng-content>
-</mat-toolbar>
+<ng-content select="[marco-header]" ></ng-content>
 <div class="marco-body" (scroll)="onScroll($event)">
 	<div class="marco-body-content" >
 		<ng-content select="[marco-body]"></ng-content>

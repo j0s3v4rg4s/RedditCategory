@@ -1,7 +1,8 @@
 <app-marco>
-	<div marco-header>
+	<mat-toolbar marco-header color="primary">
 		<span>Reddit Categorias</span>
-	</div>
+	</mat-toolbar>
+
 
 	<div marco-body>
 		<mat-spinner style="margin: auto" *ngIf="loadCategories"></mat-spinner>
@@ -32,7 +33,8 @@
 			</div>
 
 
-			<div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.lt-lg="33%" fxFlex="25%" class="categories-item" fxFlexAlign="center" *ngIf="loadMoreCategories">
+			<div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.lt-lg="33%" fxFlex="25%" class="categories-item" fxFlexAlign="center"
+			    *ngIf="loadMoreCategories">
 				<mat-spinner style="margin: auto"></mat-spinner>
 			</div>
 
