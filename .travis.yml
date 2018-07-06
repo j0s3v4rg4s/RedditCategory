@@ -4,6 +4,8 @@ language: node_js
 node_js:
   - "8.9"
 
+repo_token: d8x0o2OR8cLak4Fhh1MEoDUmEd0i8iROl
+
 branches:
   only:
     - master
